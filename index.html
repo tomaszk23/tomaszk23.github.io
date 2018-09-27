@@ -1,0 +1,72 @@
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+<script>
+var hue = 255;
+var holdTimeInMs = 2000;
+var iteration = 0;
+var inRow = 0; 
+var rowOffset = 30; 
+
+while (hue > 0)
+			{
+			changeHue(hue, 'rgb('+hue+',0,0)', holdTimeInMs, iteration);
+      if (inRow > 10)
+      {
+hue = hue - rowOffset; 
+inRow = 0
+}
+else
+{
+      hue--;
+      inRow++;
+}
+      iteration++;
+}
+
+inRow = 0;
+hue = 255; 
+while (hue >0)
+{
+      changeHue(hue, 'rgb(0,'+hue+',0)', holdTimeInMs, iteration);
+ if (inRow > 10)
+      {
+hue = hue - rowOffset; 
+inRow = 0
+}
+else
+{
+      hue--;
+      inRow++;
+}
+			iteration++;
+}
+
+hue = 255; 
+while (hue >0)
+{
+      changeHue(hue, 'rgb(0,0,'+hue+')', holdTimeInMs, iteration);
+if (inRow > 10)
+      {
+hue = hue - rowOffset; 
+inRow = 0
+}
+else
+{
+      hue--;
+      inRow++;
+}      iteration++;
+}
+      
+      
+function changeHue(hue2, bgcolor, delayTime, iter)
+{
+  setTimeout(function() {$("body").css('background-color',bgcolor);$("#counter").text(hue2)}, iter*delayTime);  
+}
+</script>
+
+<Div>
+<span id ="lab"></span> value: <span id = "counter"></span>
+</Div>
