@@ -4,11 +4,11 @@
   crossorigin="anonymous"></script>
 
 <script>
-var hue = 255;
+var hue = 150;
 var holdTimeInMs = 2000;
 var iteration = 0;
 var inRow = 0; 
-var rowOffset = 30; 
+var rowOffset = 20; 
 
 while (hue > 0)
 			{
@@ -27,7 +27,7 @@ else
 }
 
 inRow = 0;
-hue = 255; 
+hue = 150; 
 while (hue >0)
 {
       changeHue(hue, 'rgb(0,'+hue+',0)', holdTimeInMs, iteration);
@@ -44,7 +44,7 @@ else
 			iteration++;
 }
 
-hue = 255; 
+hue = 150; 
 while (hue >0)
 {
       changeHue(hue, 'rgb(0,0,'+hue+')', holdTimeInMs, iteration);
@@ -59,7 +59,25 @@ else
       inRow++;
 }      iteration++;
 }
-      
+
+hue = 255; 
+while (hue >0)
+{
+      changeHue(hue, 'rgb('+hue+','+hue+','+hue+')', holdTimeInMs, iteration);
+if (inRow > 10)
+      {
+hue = hue - rowOffset; 
+inRow = 0
+}
+else
+{
+      hue--;
+      inRow++;
+}      iteration++;
+}
+
+
+changeHue(0, 'yellow', holdTimeInMs, iteration);
       
 function changeHue(hue2, bgcolor, delayTime, iter)
 {
