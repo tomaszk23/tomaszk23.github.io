@@ -1,0 +1,30 @@
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+<script>
+var hue = 100;
+var holdTimeInMs = 10000;
+var iteration = 0;
+//var inRow = 0; 
+var rowOffset = 20; 
+
+while (iteration < 5)
+	{
+	changeHue(hue, 'rgb('+hue+',0,0)', holdTimeInMs, iteration);
+	hue = hue - rowOffset; 
+	iteration++;
+	}
+
+changeHue(0, 'yellow', holdTimeInMs, iteration);
+      
+function changeHue(hue2, bgcolor, delayTime, iter)
+{
+  setTimeout(function() {$("body").css('background-color',bgcolor);$("#counter").text(hue2)}, iter*delayTime);  
+}
+</script>
+
+<Div>
+<span id ="lab"></span> value: <span id = "counter"></span>
+</Div>
