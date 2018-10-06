@@ -13,10 +13,13 @@ var g = parseInt(urlParams.get('g'));
 var b = parseInt(urlParams.get('b'));
 var hold = urlParams.get('hold');
 var offset =  urlParams.get('offset'); 
-var paramsText = "r="+r+", g="+g+", b="+b+", hold ="+hold+"ms, offset ="+offset+"ms"; 
+var paramsText = String("r="+r+", g="+g+", b="+b+", hold ="+hold+"ms, offset ="+offset+"ms"); 
 //alert(paramsText); 
-$("#params").text(paramsText); 
-$("#params").text(paramsText);
+$( document ).ready(function() {
+    $("#params").text(paramsText); 
+});
+
+//$("#params").text(paramsText);
 
 var change = 1; 
 if (offset == 0)
@@ -78,5 +81,5 @@ color : orange;
 </style>
 
 <Div id = "info">
-Params: <span id = "params"></span> value: <span id = "counter"></span>
+Params: <span id = "params"></span> <br/> value: <span id = "counter"></span>
 </Div>
