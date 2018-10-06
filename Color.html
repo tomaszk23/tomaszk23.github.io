@@ -4,32 +4,66 @@
   crossorigin="anonymous"></script>
 
 <script>
-var hue = 100;
-var holdTimeInMs = 10000;
+var hue = "";
 var iteration = 0; 
-//var inRow = 0; 
-var rowOffset = 20; 
 var querystring = window.location.search; 
-//var urlParams = new URLSearchParams(querystring);
-//var test = urlParams.get('test');
-$("#params").text(querystring); 
+var urlParams = new URLSearchParams(querystring);
+var r = parseInt(urlParams.get('r'));
+var g = parseInt(urlParams.get('g'));
+var b = parseInt(urlParams.get('b'));
+var hold = urlParams.get('hold');
+var offset =  urlParams.get('offset'); 
+var paramsText = "r="+r+", g="+g+", b="+b+", hold ="+hold+"ms, offset ="+offset+"ms"; 
+//alert(paramsText); 
+$("#params").text(paramsText); 
+$("#params").text(paramsText);
 
-while (iteration < 5)
+var change = 1; 
+if (offset == 0)
+{
+	hue = 'rgb('+r+','+g+','+b+')';
+	changeHue(hue, hue, hold, iteration);
+}
+else while (change ==1 && offset > 0)
 	{
-	changeHue(hue, 'rgb('+hue+',0,0)', holdTimeInMs, iteration);
-	hue = hue - rowOffset; 
+	change = 0;
+	hue = 'rgb('+r+','+g+','+b+')';
+	changeHue(hue, hue, hold, iteration);
+	if (r > 0 & r > offset) 
+	{
+		r = r-offset;
+		change = 1;
+	}
+	else if (r>0)
+	{
+		r = 0;
+		change=1; 
+	}			
+
+	if (b > 0 & b > offset) 
+	{
+		b = b-offset;
+		change = 1;
+	}
+	else if (b>0)
+	{
+		b = 0;
+		change=1; 
+	}	
+
+	if (g > 0 & g > offset) 
+	{
+		g = g-offset;
+		change = 1;
+	}
+	else if (g>0)
+	{
+		g = 0;
+		change=1; 
+	}	
+		
 	iteration++;
 	}
-
-hue = 100;	
-while (iteration < 10)
-	{
-	changeHue(hue, 'rgb(0,'+hue+',0)', holdTimeInMs, iteration);
-	hue = hue - rowOffset; 
-	iteration++;
-	}
-
-changeHue(0, 'yellow', holdTimeInMs, iteration);
       
 function changeHue(hue2, bgcolor, delayTime, iter)
 {
@@ -44,5 +78,5 @@ color : orange;
 </style>
 
 <Div id = "info">
-Params: <span id = "params">test</span> value: <span id = "counter"></span>
+Params: <span id = "params"></span> value: <span id = "counter"></span>
 </Div>
