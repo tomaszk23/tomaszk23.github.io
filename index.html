@@ -4,80 +4,75 @@
   crossorigin="anonymous"></script>
 
 <script>
-var hue = 150;
-var holdTimeInMs = 2000;
-var iteration = 0;
-var inRow = 0; 
-var rowOffset = 20; 
+var hue = "";
+var iteration = 0; 
+var querystring = window.location.search; 
+var urlParams = new URLSearchParams(querystring);
+var r = parseInt(urlParams.get('r'));
+var g = parseInt(urlParams.get('g'));
+var b = parseInt(urlParams.get('b'));
+var hold = urlParams.get('hold');
+var offset =  urlParams.get('offset'); 
+var colorRed = "<span style='color:rgb("+r+",0,0)'>&#9673;</span>";
+var colorGreen = "<span style='color:rgb(0,"+g+",0)'>&#9673;</span>";
+var colorBlue = "<span style='color:rgb(0,0,"+b+")'>&#9673;</span>";
+var colorFinal =  "<span style='color:rgb("+r+","+g+","+b+")'>&#9673;</span>";
+var colors = colorRed+colorGreen+colorBlue+" &#8594; "+colorFinal;
+var paramsText = String("r="+r+", g="+g+", b="+b+", hold ="+hold+"ms, offset ="+offset); 
+//alert(paramsText); 
+$( document ).ready(function() {
+    $("#params").text(paramsText);
+	$("#colors").html(colors);	
+});
 
-while (hue > 0)
-			{
-			changeHue(hue, 'rgb('+hue+',0,0)', holdTimeInMs, iteration);
-      if (inRow > 10)
-      {
-hue = hue - rowOffset; 
-inRow = 0
-}
-else
-{
-      hue--;
-      inRow++;
-}
-      iteration++;
-}
+//$("#params").text(paramsText);
 
-inRow = 0;
-hue = 150; 
-while (hue >0)
+var change = 1; 
+if (offset == 0)
 {
-      changeHue(hue, 'rgb(0,'+hue+',0)', holdTimeInMs, iteration);
- if (inRow > 10)
-      {
-hue = hue - rowOffset; 
-inRow = 0
+	hue = 'rgb('+r+','+g+','+b+')';
+	changeHue(hue, hue, hold, iteration);
 }
-else
-{
-      hue--;
-      inRow++;
-}
-			iteration++;
-}
+else while (change ==1 && offset > 0)
+	{
+	change = 0;
+	hue = 'rgb('+r+','+g+','+b+')';
+	changeHue(hue, hue, hold, iteration);
+	if (r > 0 & r > offset) 
+	{
+		r = r-offset;
+		change = 1;
+	}
+	else if (r>0)
+	{
+		r = 0;
+		change=1; 
+	}			
 
-hue = 150; 
-while (hue >0)
-{
-      changeHue(hue, 'rgb(0,0,'+hue+')', holdTimeInMs, iteration);
-if (inRow > 10)
-      {
-hue = hue - rowOffset; 
-inRow = 0
-}
-else
-{
-      hue--;
-      inRow++;
-}      iteration++;
-}
+	if (b > 0 & b > offset) 
+	{
+		b = b-offset;
+		change = 1;
+	}
+	else if (b>0)
+	{
+		b = 0;
+		change=1; 
+	}	
 
-hue = 255; 
-while (hue >0)
-{
-      changeHue(hue, 'rgb('+hue+','+hue+','+hue+')', holdTimeInMs, iteration);
-if (inRow > 10)
-      {
-hue = hue - rowOffset; 
-inRow = 0
-}
-else
-{
-      hue--;
-      inRow++;
-}      iteration++;
-}
-
-
-changeHue(0, 'yellow', holdTimeInMs, iteration);
+	if (g > 0 & g > offset) 
+	{
+		g = g-offset;
+		change = 1;
+	}
+	else if (g>0)
+	{
+		g = 0;
+		change=1; 
+	}	
+		
+	iteration++;
+	}
       
 function changeHue(hue2, bgcolor, delayTime, iter)
 {
@@ -85,6 +80,23 @@ function changeHue(hue2, bgcolor, delayTime, iter)
 }
 </script>
 
-<Div>
-<span id ="lab"></span> value: <span id = "counter"></span>
+<style> 
+#info {
+	color : black; 
+	background-color:white;
+	font-family: verdana;
+	font-size:12px;
+    width: 400px;
+    padding: 10px;
+}
+
+#colors
+{
+	font-size: 20px; 
+}
+</style>
+
+<Div id = "info">
+<div id = "colors"></div>
+Params: <span id = "params"></span> <br/> value: <span id = "counter"></span>
 </Div>
