@@ -13,10 +13,16 @@ var g = parseInt(urlParams.get('g'));
 var b = parseInt(urlParams.get('b'));
 var hold = urlParams.get('hold');
 var offset =  urlParams.get('offset'); 
-var paramsText = String("r="+r+", g="+g+", b="+b+", hold ="+hold+"ms, offset ="+offset+"ms"); 
+var colorRed = "<span style='color:rgb("+r+",0,0)'>&#9673;</span>";
+var colorGreen = "<span style='color:rgb(0,"+g+",0)'>&#9673;</span>";
+var colorBlue = "<span style='color:rgb(0,0,"+b+")'>&#9673;</span>";
+var colorFinal =  "<span style='color:rgb("+r+","+g+","+b+")'>&#9673;</span>";
+var colors = colorRed+colorGreen+colorBlue+" &#8594; "+colorFinal;
+var paramsText = String("r="+r+", g="+g+", b="+b+", hold ="+hold+"ms, offset ="+offset); 
 //alert(paramsText); 
 $( document ).ready(function() {
-    $("#params").text(paramsText); 
+    $("#params").text(paramsText);
+	$("#colors").html(colors);	
 });
 
 //$("#params").text(paramsText);
@@ -76,10 +82,21 @@ function changeHue(hue2, bgcolor, delayTime, iter)
 
 <style> 
 #info {
-color : orange; 
+	color : black; 
+	background-color:white;
+	font-family: verdana;
+	font-size:12px;
+    width: 400px;
+    padding: 10px;
+}
+
+#colors
+{
+	font-size: 20px; 
 }
 </style>
 
 <Div id = "info">
+<div id = "colors"></div>
 Params: <span id = "params"></span> <br/> value: <span id = "counter"></span>
 </Div>
