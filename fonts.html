@@ -6,13 +6,13 @@
   <script>
   var prepDelay = 5000;
   var hold = 3000; 
-  var vOffset = 10; 
+  var vOffset = 17; 
   var scrolls = 200; 
   
   var i = 0; 
   
   $( document ).ready(function() {
-		window.scrollTo(0,0);
+		window.scrollTo(0,10);
 		while (i < scrolls) 
 		{
 		 setTimeout(function() {window.scrollBy(0,vOffset);}, prepDelay+(i+1)*hold);  
@@ -58,7 +58,22 @@
    #a2, #a4, #a6, #a8, #a10
   {
 	font-size: 40px; 
-	font-style: bold;
+  }
+  
+  .bold
+  {
+	font-weight: bold;
+  }
+  
+  .invert 
+  {
+	color: white; 
+	background-color:black;
+  }
+  
+  .gray
+  {
+	background-color: #eee; 
   }
   
   #spacer
@@ -68,123 +83,153 @@
   </style>
   
 <div id = "a1" class = "alphabet">
-<div>
-ABCDEFGHIKLMNOPQRSTVXYZ
+<div class = "normal">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 </div>
-<div>
-abcdefghiklmnopqrstvxyz
+<div class = "bold">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 </div>
-<div>
-01234567890
+<div class = "invert">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 </div>
 </div>
 
-<div id = "a2" class = "alphabet">
-<div>
-ABCDEFGHIKLMNOPQRSTVXYZ
-</div>
-<div>
-abcdefghiklmnopqrstvxyz
-</div>
-<div>
-01234567890
-</div>
-</div>
+<!-- <div id = "a2" class = "alphabet"> -->
+<!-- <div class = "normal"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- <div class = "bold"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- <div class = "invert"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- <div class = "gray"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- </div> -->
 
 <div id = "a3" class = "alphabet">
-<div>
-ABCDEFGHIKLMNOPQRSTVXYZ
+<div class = "normal">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 </div>
-<div>
-abcdefghiklmnopqrstvxyz
+<div class = "bold">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 </div>
-<div>
-01234567890
+<div class = "invert">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 </div>
 </div>
 
-<div id = "a4" class = "alphabet">
-<div>
-ABCDEFGHIKLMNOPQRSTVXYZ
-</div>
-<div>
-abcdefghiklmnopqrstvxyz
-</div>
-<div>
-01234567890
-</div>
-</div>
+<!-- <div id = "a4" class = "alphabet"> -->
+<!-- <div class = "normal"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- <div class = "bold"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- <div class = "invert"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- <div class = "gray"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- </div> -->
 
 <div id = "a5" class = "alphabet">
-<div>
-ABCDEFGHIKLMNOPQRSTVXYZ
+<div class = "normal">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 </div>
-<div>
-abcdefghiklmnopqrstvxyz
+<div class = "bold">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 </div>
-<div>
-01234567890
+<div class = "invert">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 </div>
 </div>
 
-<div id = "a6" class = "alphabet">
-<div>
-ABCDEFGHIKLMNOPQRSTVXYZ
-</div>
-<div>
-abcdefghiklmnopqrstvxyz
-</div>
-<div>
-01234567890
-</div>
-</div>
+<!-- <div id = "a6" class = "alphabet"> -->
+<!-- <div class = "normal"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- <div class = "bold"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- <div class = "invert"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- <div class = "gray"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- </div> -->
 
 <div id = "a7" class = "alphabet">
-<div>
-ABCDEFGHIKLMNOPQRSTVXYZ
+<div class = "normal">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 </div>
-<div>
-abcdefghiklmnopqrstvxyz
+<div class = "bold">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 </div>
-<div>
-01234567890
+<div class = "invert">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 </div>
 </div>
 
-<div id = "a8" class = "alphabet">
-<div>
-ABCDEFGHIKLMNOPQRSTVXYZ
-</div>
-<div>
-abcdefghiklmnopqrstvxyz
-</div>
-<div>
-01234567890
-</div>
-</div>
+<!-- <div id = "a8" class = "alphabet"> -->
+<!-- <div class = "normal"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- <div class = "bold"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- <div class = "invert"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- <div class = "gray"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- </div> -->
 
 <div id = "a9" class = "alphabet">
-<div>
-ABCDEFGHIKLMNOPQRSTVXYZ
+<div class = "normal">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 </div>
-<div>
-abcdefghiklmnopqrstvxyz
+<div class = "bold">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 </div>
-<div>
-01234567890
+<div class = "invert">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 </div>
 </div>
 
-<div id = "a10" class = "alphabet">
-<div>
-ABCDEFGHIKLMNOPQRSTVXYZ
-</div>
-<div>
-abcdefghiklmnopqrstvxyz
-</div>
-<div>
-01234567890
-</div>
-</div>
+<!-- <div id = "a10" class = "alphabet"> -->
+<!-- <div class = "normal"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- <div class = "bold"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- <div class = "invert"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- <div class = "gray"> -->
+<!-- SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+<!-- </div> -->
+<!-- </div> -->
 
 <div id = "spacer"></div>
