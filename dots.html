@@ -1,0 +1,38 @@
+<style> 
+
+body 
+{
+  margin: 0px;
+  background-size: 2px 2px;
+  background-position: 0 0, 0 1px, 1px -1px, -1px 0px;
+}
+
+</style>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+<script>
+	var querystring = window.location.search; 
+	var urlParams = new URLSearchParams(querystring);
+	var dot1 = urlParams.get('dot1');
+	var dot2 = urlParams.get('dot2');
+	$( document ).ready(function() {
+		var pattern =  "linear-gradient(45deg, #"+dot1+" 25%, transparent 25%), linear-gradient(-45deg, #"+dot1+" 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #"+dot1+" 75%), linear-gradient(-45deg, transparent 75%, #"+dot1+" 75%)";
+		$("body").css("background-color", "#"+dot2); 
+		$("body").css("background-image", pattern); 
+		//$(".dots").css("background", pattern); 
+		//$(".dots").css("background-size: 2px 2px"); 
+		//$(".dots").css("margin-left", offset+"px");
+});
+
+	
+
+</script>
+
+<body>
+<div class = "dots">
+</div> 
+</body>

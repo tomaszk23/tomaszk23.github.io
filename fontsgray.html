@@ -1,0 +1,233 @@
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  
+  <script>
+  var prepDelay = 5000;
+  var hold = 3000; 
+  var vOffset = 17; 
+  var scrolls = 200; 
+  
+  var i = 0; 
+  
+  $( document ).ready(function() {
+		window.scrollTo(0,10);
+		while (i < scrolls) 
+		{
+		 setTimeout(function() {window.scrollBy(0,vOffset);}, prepDelay+(i+1)*hold);  
+		i++;
+		}
+	});
+	
+	
+	
+  </script>
+  
+  <style> 
+  .alphabet 
+  {
+	margin-bottom: 0px;
+	margin-left: 300px;
+  }
+  
+  #a1, #a2 {
+  font-family: Arial; 
+  }
+  
+    #a3, #a4 {
+  font-family: "Trebuchet MS";
+  }
+  
+    #a5, #a6 {
+  font-family: "Times New Roman"; 
+  }
+  
+    #a7, #a8 {
+  font-family: "Courier New"; 
+  }
+  
+    #a9, #a10 {
+  font-family: verdana; 
+  }
+  
+  #a1, #a3, #a5, #a7, #a9
+  {
+	font-size: 15px; 
+  }
+  
+   #a2, #a4, #a6, #a8, #a10
+  {
+	font-size: 40px; 
+  }
+  
+  .normal
+  {
+  }
+  
+  .aliased
+  {
+	-webkit-font-smoothing: none;
+	-moz-osx-font-smoothing: auto;
+	/*font-smoothing: antialiased;*/
+	font-smooth: never;
+  }
+  
+  .antialiased
+  {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+	font-smooth: always;
+  }
+  
+  .bold
+  {
+	font-weight: bold;
+  }
+  
+  .invert 
+  {
+	color: white; 
+	background-color:black;
+  }
+  
+  .gray
+  {
+	color: #222; 
+  }
+  
+  .gray2
+  {
+	color: #444;
+  }
+  
+  .gray3 
+  {
+	color: #666;
+  }
+  
+  .gray4 
+  {
+	color: #888;
+  }
+  
+  .gray5 
+  {
+	color: #bbb; 
+  }
+  
+  #spacer
+  {
+	height : 2000px;
+  }
+  </style>
+
+<div id = "a1" class = "alphabet">
+<div class = "normal">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray2">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray3">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray4">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray5">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+</div>
+
+
+<div id = "a3" class = "alphabet">
+<div class = "normal">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray2">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray3">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray4">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray5">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+</div>
+
+<div id = "a5" class = "alphabet">
+<div class = "normal">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray2">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray3">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray4">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray5">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+</div>
+
+
+<div id = "a7" class = "alphabet">
+<div class = "normal">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray2">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray3">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray4">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray5">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+</div>
+
+<div id = "a9" class = "alphabet">
+<div class = "normal">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray2">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray3">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray4">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+<div class = "gray5">
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+</div>
+</div>
+
+<div id = "spacer"></div>
